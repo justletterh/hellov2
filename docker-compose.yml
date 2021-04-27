@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  python:
+    image: python:3.8-alpine
+    restart: "no"
+    pid: "host"
+    entrypoint: python3 -u /app/main.py
+    volumes:
+      - "./py/:/app"
